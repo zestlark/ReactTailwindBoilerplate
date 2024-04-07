@@ -132,26 +132,26 @@ export default function SignupPage() {
                                     {formInputerror.nameerror ? <FontAwesomeIcon className='text-red-500 mr-1' icon={faTriangleExclamation} /> : ''}
                                     Name
                                 </label>
-                                <input name='name' value={formData.name} onChange={handleInputChange} type='text' className={`w-full font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.nameerror ? 'bg-red-100 text-red-500' : ''}`} />
+                                <input name='name' value={formData.name} onChange={handleInputChange} type='text' className={`w-full text-sm font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.nameerror ? 'bg-red-100 text-red-500' : ''}`} />
                             </span>
                             <span className='w-[50%]'>
                                 <label className='block font-bold'>
                                     {formInputerror.usernameerror ? <FontAwesomeIcon className='text-red-500 mr-1' icon={faTriangleExclamation} /> : ''}
                                     Username</label>
-                                <input name='username' value={formData.username} onChange={handleInputChange} type='text' className={`w-full font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.usernameerror ? 'bg-red-100 text-red-500' : ''}`} />
+                                <input name='username' value={formData.username} onChange={handleInputChange} type='text' className={`w-full text-sm font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.usernameerror ? 'bg-red-100 text-red-500' : ''}`} />
                             </span>
                         </div>
                         <span className='block mt-6'>
                             <label className='block font-bold'>
                                 {formInputerror.emailerror ? <FontAwesomeIcon className='text-red-500 mr-1' icon={faTriangleExclamation} /> : ''}
                                 Email</label>
-                            <input name='email' value={formData.email} onChange={handleInputChange} type='email' className={`w-full font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.emailerror ? 'bg-red-100 text-red-500' : ''}`} />
+                            <input name='email' value={formData.email} onChange={handleInputChange} type='email' className={`w-full text-sm font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.emailerror ? 'bg-red-100 text-red-500' : ''}`} />
                         </span>
                         <span className='block mt-6'>
                             <label className='block font-bold'>
                                 {formInputerror.passworderror ? <FontAwesomeIcon className='text-red-500 mr-1' icon={faTriangleExclamation} /> : ''}
                                 Password</label>
-                            <input name='password' value={formData.password} onChange={handleInputChange} placeholder='6+ characters' type='password' className={`w-full font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.passworderror ? 'bg-red-100 text-red-500' : ''}`} />
+                            <input name='password' value={formData.password} onChange={handleInputChange} placeholder='6+ characters' type='password' className={`w-full text-sm font-light p-3 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3] ${formInputerror.passworderror ? 'bg-red-100 text-red-500' : ''}`} />
                         </span>
                         <span className='flex mt-6 align-top gap-5'>
                             <input name='terms' checked={formData.terms} onChange={handleInputChange} type='checkbox' className='w-7 border-0 outline-0 mt-1 rounded-md bg-[#f3f3f3]' />
@@ -159,7 +159,7 @@ export default function SignupPage() {
                                 Service, Privacy Policy,</a> and our <a href='notificaton' className='text-indigo-600'>default Notification
                                     Settings.</a></p>
                         </span>
-                        <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-4 my-6 rounded-lg text-sm text-white transition-all w-full md:w-[200px]'>Create Account</button>
+                        <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3 my-6 rounded-lg text-sm text-white transition-all w-full md:w-[200px]'>Create Account</button>
                         <p className='mb-5 sm:block md:hidden xl:block'>
                             <small className='text-gray-500'>This site is protected by reCAPTCHA and the Google <br />
                                 <a href='terms' className='text-indigo-600'>Privacy Policy</a> and <a href='terms' className='text-indigo-600'>Terms of Service apply.</a></small>
