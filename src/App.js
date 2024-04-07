@@ -1,10 +1,10 @@
-import DemoComponent from "./DemoComponent";
+import LoginPage from "./components/LoginPage"
 
 
 function App() {
   return (
     <div>
-   <DemoComponent />
+      <LoginPage />
     </div>
   );
 }
