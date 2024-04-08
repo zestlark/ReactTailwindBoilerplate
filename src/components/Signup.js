@@ -5,6 +5,7 @@ import { faArrowRight, faTriangleExclamation } from '@fortawesome/free-solid-svg
 import { useNavigate } from "react-router-dom";
 
 export default function SignupPage() {
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -89,7 +90,8 @@ export default function SignupPage() {
         }
 
         setformerror('')
-        localStorage.setItem('formData', JSON.stringify(formData));
+
+        sessionStorage.setItem('formData', JSON.stringify(formData));
         navigate('./getstarted')
     };
 
