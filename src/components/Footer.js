@@ -103,7 +103,7 @@ export default function Footer() {
                 </ul>
 
                 {footerurl.map((e, key) => (
-                    <ul className='mx-3 ml-0 sm:w-[150px] mb-5' key={key}>
+                    <ul className='mx-3 ml-0 w-full sm:w-[20%] md:w-[150px] mb-5' key={key}>
                         <li className='text-sm font-semibold mb-4' key={`title_${key}`}>{e.title}</li>
                         {e.sublinks.map((f, subkey) => (
                             <React.Fragment key={`sublink_${key}_${subkey}`}>
