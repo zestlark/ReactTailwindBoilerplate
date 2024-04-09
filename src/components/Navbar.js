@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faBriefcase, faCircleXmark, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
 
 import MenuBar from '../assets/icons/menubar.png'
 
 export default function Navbar() {
+
+    const navigate = useNavigate();
 
     const [userexist, setuserexist] = useState(false)
     const [navmenu, setnavmenu] = useState(false)
@@ -26,6 +29,10 @@ export default function Navbar() {
         }
     }, [avatar, name, email])
 
+
+    const goto = (url) => {
+        navigate(url)
+    }
 
     const NotificatonAndAvatar = ({ className }) => {
         return (
@@ -65,7 +72,7 @@ export default function Navbar() {
             </div>
 
 
-            <span className={`${navmenu ? 'fixed' : 'hidden'} z-10 top-20 left-0 py-5 md:py-0 flex-col md:flex-row md:static md:flex w-full justify-between bg-white`}>
+            <span className={`${navmenu ? 'fixed' : 'hidden'} max-h-[90vh] overflow-scroll border-2 md:border-0 rounded-md md:rounded-none z-10 top-20 left-0 py-5 md:py-0 flex-col md:flex-row md:static md:flex w-full justify-between bg-white`}>
                 {userexist ?
                     <span className='mx-5 mb-2 md:mt-0 md:mx-0 flex-wrap md:flex-nowrap flex items-center gap-5 md:hidden'>
                         <NotificatonAndAvatar className="w-full flex-col-reverse md:w-auto items-center flex  gap-2" />
@@ -98,12 +105,10 @@ export default function Navbar() {
                         </div>
                         :
                         <div className='w-full md:w-auto flex gap-3'>
-                            <a href='/'>
-                                <button className='bg-transparent hover:bg-gray-100 px-6 py-3 border-2 border-gray-500  rounded-lg text-md text-gray-500 transition-all w-full'>Login</button>
-                            </a>
-                            <a href='/signup'>
-                                <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3  rounded-lg text-md text-white transition-all w-full'>Signup</button>
-                            </a>
+
+                            <button className='bg-transparent hover:bg-gray-100 px-6 py-3 border-2 border-gray-500  rounded-lg text-md text-gray-500 transition-all w-full' onClick={() => { goto('/') }}>Login</button>
+                            <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3  rounded-lg text-md text-white transition-all w-full' onClick={() => { goto('/signup') }}>Signup</button>
+
                         </div>
                     }
 
