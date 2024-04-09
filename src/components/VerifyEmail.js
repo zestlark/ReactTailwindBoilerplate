@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faCheckCircle, } from '@fortawesome/free-solid-svg-icons'
 
@@ -22,21 +23,21 @@ export default function VerifyEmail() {
           <FontAwesomeIcon className='text-gray-400 text-[80px]' icon={faEnvelope} />
         </div>
 
-        <div className='text-center font-normal text-sm text-gray-500'>
+        <div className='text-center font-normal text-sm text-gray-500 px-3'>
           <p className='mt-3'>Please verify your email address. We've sent a confirmation email to:</p>
           <p className='my-5'><b className='font-bold text-black'>{email}</b></p>
           <p className='mt-3'>Click the confirmation link in that email to begin using Dribbble.</p>
-          <p className='mt-5 max-w-[50%] mx-auto'>
+          <p className='mt-5 lg:max-w-[50%] mx-auto'>
             Didn't receive the email? Check your Spam folder, it may have been caught by a filter. If
             you still don't see it, you can <a href='/' className='text-[#ea4c88] font-medium'>resend the confirmation email</a>.
           </p>
-          <p className='mt-5 max-w-[50%] mx-auto'>
+          <p className='mt-5  mx-auto'>
             Wrong email address? <a href='/' className='text-[#ea4c88] font-medium'>Change it.</a>
           </p>
         </div>
       </div>
 
-      hello
+      <Footer />
     </>
   )
 }

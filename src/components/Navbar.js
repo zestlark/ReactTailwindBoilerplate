@@ -49,7 +49,7 @@ export default function Navbar() {
                 {navmenu ? <FontAwesomeIcon className='text-gray-500  w-8 h-7' icon={faXmark} /> : ''}
             </div>
 
-            <span className={`${navmenu ? 'fixed' : 'hidden'} top-20 left-0 py-5 sm:py-0 flex-col sm:flex-row sm:static sm:flex w-full justify-between bg-white`}>
+            <span className={`${navmenu ? 'fixed' : 'hidden'} z-10 top-20 left-0 py-5 sm:py-0 flex-col sm:flex-row sm:static sm:flex w-full justify-between bg-white`}>
 
                 <span className='mx-5 mb-2 sm:mt-0 sm:mx-0 flex-wrap sm:flex-nowrap flex items-center gap-5 sm:hidden'>
                     <NotificatonAndAvatar className="w-full flex-col-reverse sm:w-auto items-center flex  gap-2" />
