@@ -101,7 +101,7 @@ export default function SignupPage() {
         <div className='md:flex items-stretch'>
             <div className='bg-[#f2d184] md:min-w-[25%] py-[60px]  overflow-hidden relative flex flex-col h-svh'>
                 <div className='w-[80%] max-w-sm mx-auto text-[#866518]'>
-                    <p className='text-[#a68239] logo-name'>dribble</p>
+                    <p className='text-[#a68239] logo-name'>dribbble</p>
                     <h1 className='font-bold text-2xl mt-5'>
                         Discover the world's top
                         Designers & Creatives.</h1>

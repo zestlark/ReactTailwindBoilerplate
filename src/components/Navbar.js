@@ -62,7 +62,7 @@ export default function Navbar() {
     return (
         <div className='flex items-center justify-between w-[100%] px-3 md:px-10  mx-auto  md:min-w-[25%] py-[20px] border-b-2'>
             <div className='flex flex-row-reverse md:flex-row justify-end md:justify-start items-center gap-3 md:gap-10'>
-                <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-black p-2 md:p-0 logo-name'>dribble</p></span>
+                <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-black p-2 md:p-0 logo-name'>dribbble</p></span>
             </div>
 
 
@@ -90,7 +90,7 @@ export default function Navbar() {
 
 
                 <span className='mx-5 mt-5 md:mt-0 md:mx-0 flex-wrap md:flex-nowrap flex items-center gap-5 '>
-                    <div className='bg-gray-200 flex p-2 w-full md:w-[140px] items-center rounded-md'>
+                    <div className='bg-gray-200 flex p-2 w-full md:w-[140px] items-center rounded-md border-2'>
                         <FontAwesomeIcon className='text-gray-500 w-10' icon={faSearch} />
                         <input placeholder='Search' className='w-full bg-gray-200 p-[3px]' type='search' />
                     </div>

@@ -85,7 +85,7 @@ export default function Footer() {
             <div className='max-w-[1200px] mx-auto mt-8 flex justify-between items-start flex-wrap lg:flex-nowrap'>
 
                 <ul className='max-w-[250px] lg:max-w-[270px] p-3 pl-0 mb-5 lg:mr-10'>
-                    <p className='text-black p-2 pl-0 sm:p-0 logo-name-big mb-5'>dribble</p>
+                    <p className='text-black p-2 pl-0 sm:p-0 logo-name-big mb-5'>dribbble</p>
                     <p>
                         Dribbble is the world's leading
                         community for creatives to share, grow,
@@ -126,7 +126,7 @@ export default function Footer() {
 
             <div className='max-w-[1200px] mx-auto mt-8 p-3 pl-0 py-12 pb-8 flex-col sm:flex-row flex justify-between items-center border-t-2'>
                 <p className='text-gray-500'>&copy; 2023 Dribbble. All rights reserved.</p>
-                <p className='flex items-center gap-2 mt-8 sm:mt-0 text-gray-500'>20,501,853 shots dribbbled <img className='w-7' alt='' src={Logo} /></p>
+                <p className='flex items-center gap-2 mt-8 sm:mt-0 text-gray-500'><span className='font-bold text-black'>20,501,853</span> shots dribbbled <img className='w-7' alt='' src={Logo} /></p>
             </div>
 
         </div>

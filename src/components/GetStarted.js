@@ -117,7 +117,7 @@ export default function GetStarted() {
         <div>
             <div className='max-w-[1200px] w-[100%] px-3  mx-auto  md:min-w-[25%] py-[20px] sm:py-[60px]  flex flex-col h-svh'>
                 <div className='flex flex-row-reverse sm:flex-row justify-end sm:justify-start items-center gap-3 sm:gap-10'>
-                    <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-[#ea4b8b] p-2 sm:p-0 logo-name'>dribble</p></span>
+                    <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-[#ea4b8b] p-2 sm:p-0 logo-name'>dribbble</p></span>
                     {userRoleSection ? <span onClick={togetstarted} className='bg-gray-200 w-7 h-7 grid place-content-center rounded-md'><FontAwesomeIcon className='text-gray-500 mr-1 ml-1 w-2' icon={faAngleLeft} /></span> : ''}
                 </div>
 
