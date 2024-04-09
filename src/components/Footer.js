@@ -80,7 +80,7 @@ export default function Footer() {
     ]
 
     return (
-        <div className='bg-gray-100 text-sm p-4 mt-10 pt-10'>
+        <div className='bg-gray-100 text-sm p-4 pt-10'>
 
             <div className='max-w-[1200px] mx-auto mt-8 flex justify-between items-start flex-wrap lg:flex-nowrap'>
 

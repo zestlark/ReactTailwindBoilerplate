@@ -1,19 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faCheckCircle, } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
 
 export default function VerifyEmail() {
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let formdata = sessionStorage.getItem('formData');
+    formdata = JSON.parse(formdata)
+
+    if (!formdata) {
+      navigate('../signup');
+    }
+  }, [navigate]);
+
   let formdata = sessionStorage.getItem('formData');
-  formdata = JSON.parse(formdata)
-  const { email } = formdata
+  formdata = JSON.parse(formdata);
+
+  if (!formdata) {
+    return null;
+  }
+
+  const { email } = formdata;
 
   return (
     <>
       <Navbar />
-      <div className='sm:w-[80%] p-2 mx-auto mt-10 min-h-[70svh]' id="role">
+      <div className='sm:w-[80%] p-2 mx-auto mt-10 mb-10 min-h-[70svh]' id="role">
         <h1 className='font-bold text-3xl mt-5 text-center'>
           Please verify your email...
         </h1>

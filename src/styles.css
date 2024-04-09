@@ -21,6 +21,11 @@
     color: #ea4c88;
 }
 
+.logo-font {
+    font-family: 'Pacifico', cursive !important;
+    font-weight: lighter;
+}
+
 input:focus {
     outline: 0;
 }
