@@ -4,25 +4,33 @@ import DesignerImage from '../assets/user-role/designer.png';
 import InspirationImage from '../assets/user-role/inspiration.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
+
 
 export default function UserRolePage() {
+
+    const navigate = useNavigate();
+
     const [selectedRole, setSelectedRole] = useState(null);
 
     const rolecard = [
         {
             title: "I'm a designer looking to share my work",
             image: StudentImage,
-            description: "Dive into the world of design with Dribbble, the ultimate platform for aspiring creatives."
+            description: "Dive into the world of design with Dribbble, the ultimate platform for aspiring creatives.",
+            role: "desinger"
         },
         {
-            title: "I'm a designer looking to share my work",
+            title: "I'm looking to hire a designer",
             image: DesignerImage,
-            description: "Join a vibrant community of creative minds on Dribbble, where over 7 million design professionals"
+            description: "Join a vibrant community of creative minds on Dribbble, where over 7 million design professionals",
+            role: "hiring"
         },
         {
-            title: "I'm a designer looking to share my work",
+            title: "I'm looking for design inspiration",
             image: InspirationImage,
-            description: "With over 7 million shots from a vast community of designers, Dribbble is the leading source for design"
+            description: "With over 7 million shots from a vast community of designers, Dribbble is the leading source for design",
+            role: "inspiration",
         }
     ];
 
@@ -30,14 +38,24 @@ export default function UserRolePage() {
         setSelectedRole(index);
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (selectedRole !== null) {
+            console.log(rolecard[selectedRole].role);
+            localStorage.setItem('formdataUserRole', rolecard[selectedRole].role);
+            navigate('../signup/verifyemail')
+        }
+    }
+
+
     return (
-        <div className='sm:w-[80%] p-2 mx-auto mt-4'>
+        <div className='sm:w-[80%] p-2 mx-auto mt-4' id="role">
             <h1 className='font-bold text-3xl mt-5 text-center'>
                 What brings you to Dribbble?
             </h1>
             <p className='mt-3 font-light text-sm text-gray-500 text-center'>Select the options that best describe you. Don't worry, you can explore other options later.</p>
 
-            <form className='mt-6'>
+            <form className='mt-6' onSubmit={handleSubmit}>
                 <div className='sm:flex justify-between gap-10  items-center '>
                     {
                         rolecard.map((e, index) => {

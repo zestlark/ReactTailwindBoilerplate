@@ -4,10 +4,16 @@
 @import 'tailwindcss/utilities';
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-input:focus{
+.logo-name {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+input:focus {
     outline: 0;
 }

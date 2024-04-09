@@ -13,19 +13,31 @@ export default function GetStarted() {
     const [userRoleSection, setuserRoleSection] = useState(false)
 
     useEffect(() => {
+        let signupData = sessionStorage.getItem('formData');
+        if (!signupData) {
+            navigate('../signup');
+            return;
+        }
+
+        signupData = JSON.parse(signupData);
+        if (signupData.name && signupData.username && signupData.password && signupData.email && signupData.terms) {
+            console.log(signupData);
+        } else {
+            navigate('../signup');
+        }
+    }, [navigate]);
+
+    useEffect(() => {
         if (location.hash === '#role') {
             let formdata2 = sessionStorage.getItem('formData2');
             if (formdata2 !== '' && formdata2 !== null) {
                 formdata2 = JSON.parse(formdata2);
                 if (formdata2 && formdata2.avatar && formdata2.location) {
-                    console.log(formdata2);
                     setuserRoleSection(true);
                 } else {
-                    console.error('Invalid formdata2:', formdata2);
                     setuserRoleSection(false);
                 }
             } else {
-                console.error('No data found in sessionStorage for formData2');
                 setuserRoleSection(false);
             }
         } else {
@@ -46,6 +58,8 @@ export default function GetStarted() {
     const handleimageavatar = (e) => {
         let src = e.target.src
         setavatar(src)
+        form.avatar = src
+        setform(form)
     }
 
     const handleuseravatar = (e) => {
@@ -103,7 +117,7 @@ export default function GetStarted() {
         <div>
             <div className='max-w-[1200px] w-[100%] px-3  mx-auto  md:min-w-[25%] py-[20px] sm:py-[60px]  flex flex-col h-svh'>
                 <div className='flex flex-row-reverse sm:flex-row justify-end sm:justify-start items-center gap-3 sm:gap-10'>
-                    <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-[#ea4b8b] p-2 sm:p-0'>dribble</p></span>
+                    <span className='bg-transparent w-auto h-7 grid place-content-center rounded-md'><p className='text-[#ea4b8b] p-2 sm:p-0 logo-name'>dribble</p></span>
                     {userRoleSection ? <span onClick={togetstarted} className='bg-gray-200 w-7 h-7 grid place-content-center rounded-md'><FontAwesomeIcon className='text-gray-500 mr-1 ml-1 w-2' icon={faAngleLeft} /></span> : ''}
                 </div>
 
