@@ -124,7 +124,7 @@ export default function Footer() {
 
             </div>
 
-            <div className='max-w-[1200px] mx-auto mt-8 p-3 pl-0 py-12 pb-8 sm:flex justify-between items-center border-t-2'>
+            <div className='max-w-[1200px] mx-auto mt-8 p-3 pl-0 py-12 pb-8 flex-col sm:flex-row flex justify-between items-center border-t-2'>
                 <p className='text-gray-500'>&copy; 2023 Dribbble. All rights reserved.</p>
                 <p className='flex items-center gap-2 mt-8 sm:mt-0 text-gray-500'>20,501,853 shots dribbbled <img className='w-7' alt='' src={Logo} /></p>
             </div>
