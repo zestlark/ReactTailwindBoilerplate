@@ -132,7 +132,7 @@ export default function GetStarted() {
                         <form className='mt-10' onSubmit={handleSubmit}>
                             <label className='block font-bold'>Add an avatar</label>
                             <div className='mt-8 flex flex-col justify-center items-center  sm:flex-row gap-2 sm:gap-10 sm:items-start sm:justify-start'>
-                                <img className={`rounded-full w-40 h-40 border-dashed border-2 p-1 cursor-pointer' ${formInputerror.avatarerror ? 'border-red-500' : ''}`} src={avatar} onClick={() => { document.getElementById('avatarinput').click() }} alt='' />
+                                <img className={`rounded-full w-40 h-40 object-cover border-dashed border-2 p-1 cursor-pointer' ${formInputerror.avatarerror ? 'border-red-500' : ''}`} src={avatar} onClick={() => { document.getElementById('avatarinput').click() }} alt='' />
                                 <span className='mt-8 w-full'>
                                     <label className='border-2 p-2 rounded-md text-sm cursor-pointer w-full block sm:inline-block text-center sm:w-auto' onClick={() => { document.getElementById('avatarinput').click() }}>Choose image</label>
                                     <input className='hidden' onChange={handleuseravatar} accept=".jpb,.png,.jpeg" id='avatarinput' type='file' />
