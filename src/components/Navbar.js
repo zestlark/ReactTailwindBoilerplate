@@ -104,10 +104,10 @@ export default function Navbar() {
                             <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3  rounded-lg text-md text-white transition-all w-full'>upload</button>
                         </div>
                         :
-                        <div className='w-full md:w-auto flex gap-3'>
+                        <div className='w-full md:w-auto flex gap-3 items-center'>
 
-                            <button className='bg-transparent hover:bg-gray-100 px-6 py-3 border-2 border-gray-500  rounded-lg text-md text-gray-500 transition-all w-full' onClick={() => { goto('/') }}>Login</button>
-                            <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3  rounded-lg text-md text-white transition-all w-full' onClick={() => { goto('/signup') }}>Signup</button>
+                            <button className='bg-transparent hover:bg-gray-100 px-6 py-3 border-[1px] border-gray-500  rounded-lg text-md text-gray-500 transition-all w-full' onClick={() => { goto('/') }}>Login</button>
+                            <button className='bg-[#ea4b8b] hover:bg-[#ea4b8b99] px-6 py-3 border-[1px] border-[#ea4b8b]  rounded-lg text-md text-white transition-all w-full' onClick={() => { goto('/signup') }}>Signup</button>
 
                         </div>
                     }
